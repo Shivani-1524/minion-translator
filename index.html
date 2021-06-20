@@ -13,13 +13,21 @@
         display: block;
         margin: 1rem;
     }
+
+    #output{
+        border: 1px solid black;
+        height: 10vh;
+        width: 80%;
+        margin: 1rem;
+        padding: 1rem;
+    }
 </style>
 <body>
     <h1>talk banananana</h1>
-    <textarea id="txtinput" placeholder="type english here to convert it to the language of the minions"></textarea>
+    <textarea id="txtinput" placeholder="type to convert it to the language of the minions"></textarea>
     <button id="btnTranslate">Translate</button>
-    <p>Output will come here</p>
-    <div>
+    <p style="font-size: larger;">Output will come here 👇</p>
+    <div id="output">
         <p></p>
     </div>
 
