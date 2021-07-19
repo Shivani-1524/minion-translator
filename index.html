@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
     textarea{
@@ -23,14 +24,28 @@
     }
 </style>
 <body>
-    <h1>talk banananana</h1>
-    <textarea id="txtinput" placeholder="type to convert it to the language of the minions"></textarea>
-    <button id="btnTranslate">Translate</button>
-    <p style="font-size: larger;">Output will come here 👇</p>
-    <div id="output">
-        <p></p>
+  <h1 id="header">Bananana Translator 🍌</h1>
+    <div class="container">
+        <div class="user-input">
+            <textarea id="txtinput" placeholder="type text for translation"></textarea>
+            <button id="btnTranslate">Translate</button>
+        </div>
+        <div class="output-container">
+            <p>Output 👉</p>
+            <div id="output">
+                <p></p>
+            </div>
+        </div>
+        <div class="translator">
+            Choose Language 🤪:
+            <select name="mods" id="mode">
+                <option value="minion">Minion</option>
+                <option value="PigLatin">Pig Latin</option>
+                <option value="mandalorian">Mandalorian</option>
+            </select>
+        </div>
     </div>
-
+    
     <script src="app.js"></script>
 </body>
 </html>
