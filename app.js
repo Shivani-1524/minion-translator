@@ -6,22 +6,22 @@ let header = document.querySelector('#header');
 let heading = header.innerText;
 
 const database = {
-    modes : [
+    modes: [
         {
-            name:"minion",
-            heading:"Bananana Translator 🍌",
+            name: "minion",
+            heading: "Bananana Translator 🍌",
             URLs: "https://api.funtranslations.com/translate/minion.json",
-            color: "#ffd166"
+            color: "#ffb703"
         },
         {
-            name:"PigLatin",
-            heading:"Pig Latin Translator 🐽",
+            name: "PigLatin",
+            heading: "Pig Latin Translator 🐽",
             URLs: "https://api.funtranslations.com/translate/pig-latin.json",
             color: "#fec5bb"
         },
         {
-            name:"mandalorian",
-            heading:"Mandalorian Translator 👾",
+            name: "mandalorian",
+            heading: "Mandalorian Translator 👾",
             URLs: "https://api.funtranslations.com/translate/mandalorian.json",
             color: "#9bafd9"
         }
@@ -31,20 +31,20 @@ const database = {
 let y = 0;
 let URL = "https://api.funtranslations.com/translate/minion.json";
 
-function getTranslationURL(text){
+function getTranslationURL(text) {
     return URL + "?" + "text=" + text;
 }
 
-function errorhandler(error){
-    console.log("error occured",error);
+function errorhandler(error) {
+    console.log("error occured", error);
     alert("server down try later!");
 }
 
-function modeSelectHandler(){
-    
-    database.modes.map((item, i)=>{
-        if(modeSelect.value===item.name){
-            var res = heading.replace("Bananana Translator 🍌",item.heading);
+function modeSelectHandler() {
+    outputDiv.innerText = "";
+    database.modes.map((item, i) => {
+        if (modeSelect.value === item.name) {
+            var res = heading.replace("Bananana Translator 🍌", item.heading);
             document.getElementById("header").innerHTML = res;
             URL = item.URLs;
             document.body.style.background = item.color;
@@ -57,7 +57,7 @@ function clickHandler() {
         console.log(json.contents.translated);
         console.log(json.contents.text);
         outputDiv.innerText = "translated -" + json.contents.translated;
-    }).catch(errorhandler) 
+    }).catch(errorhandler)
 };
 modeSelect.addEventListener("change", modeSelectHandler);
 btnTranslate.addEventListener("click", clickHandler);

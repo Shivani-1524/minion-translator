@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Translator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    textarea{
+    textarea {
         height: 10vh;
         width: 90%;
         display: block;
         margin: 1rem;
     }
 
-    #output{
+    #output {
         border: 1px solid black;
         height: 10vh;
         width: 80%;
@@ -23,21 +27,24 @@
         padding: 1rem;
     }
 </style>
+
 <body>
-  <h1 id="header">Bananana Translator 🍌</h1>
+
     <div class="container">
+        <h1 id="header">Bananana Translator 🍌</h1>
         <div class="user-input">
-            <textarea id="txtinput" placeholder="type text for translation"></textarea>
+            <textarea id="txtinput" placeholder="type text for translation (ex: hello my friend)"></textarea>
             <button id="btnTranslate">Translate</button>
         </div>
         <div class="output-container">
-            <p>Output 👉</p>
+            <p>Output 👇</p>
             <div id="output">
                 <p></p>
             </div>
         </div>
         <div class="translator">
             Choose Language 🤪:
+            <span></span>
             <select name="mods" id="mode">
                 <option value="minion">Minion</option>
                 <option value="PigLatin">Pig Latin</option>
@@ -45,7 +52,8 @@
             </select>
         </div>
     </div>
-    
+
     <script src="app.js"></script>
 </body>
+
 </html>
