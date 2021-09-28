@@ -1,0 +1,10 @@
+# Pro Translator
+The Pro Translator app is made using vanillaJS.   
+You can use it to translate english into:
+* GunGan Language
+* Mandalorian Language
+* Pig-Latin Language  
+
+It can be played as a game and can be used as a way to teach language structures in a fun way.
+
+
