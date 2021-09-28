@@ -8,10 +8,10 @@ let heading = header.innerText;
 const database = {
     modes: [
         {
-            name: "minion",
-            heading: "Bananana Translator 🍌",
-            URLs: "https://api.funtranslations.com/translate/minion.json",
-            color: "#ffb703"
+            name: "gungan",
+            heading: "Gungan Translator 👽",
+            URLs: "https://api.funtranslations.com/translate/gungan.json",
+            color: "#94C973"
         },
         {
             name: "PigLatin",
@@ -28,8 +28,7 @@ const database = {
     ]
 }
 
-let y = 0;
-let URL = "https://api.funtranslations.com/translate/minion.json";
+let URL = "https://api.funtranslations.com/translate/gungan.json";
 
 function getTranslationURL(text) {
     return URL + "?" + "text=" + text;
@@ -44,7 +43,7 @@ function modeSelectHandler() {
     outputDiv.innerText = "";
     database.modes.map((item, i) => {
         if (modeSelect.value === item.name) {
-            var res = heading.replace("Bananana Translator 🍌", item.heading);
+            var res = heading.replace("Gungan Translator 👽", item.heading);
             document.getElementById("header").innerHTML = res;
             URL = item.URLs;
             document.body.style.background = item.color;
