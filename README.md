@@ -1,5 +1,5 @@
 # Pro Translator
-The Pro Translator app is made using vanillaJS.   
+The Pro Translator app was made using vanillaJS.   
 You can use it to translate english into:
 * GunGan Language
 * Mandalorian Language
