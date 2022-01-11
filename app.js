@@ -30,16 +30,14 @@ const database = {
 
 let URL = "https://api.funtranslations.com/translate/gungan.json";
 
-function getTranslationURL(text) {
-    return URL + "?" + "text=" + text;
-}
+const getTranslationURL = (text) => URL + "?" + "text=" + text
 
-function errorhandler(error) {
+const errorhandler = (error) => {
     console.log("error occured", error);
     alert("server down try later!");
 }
 
-function modeSelectHandler() {
+const modeSelectHandler = () => {
     outputDiv.innerText = "";
     database.modes.map((item, i) => {
         if (modeSelect.value === item.name) {
@@ -50,13 +48,15 @@ function modeSelectHandler() {
         }
     })
 }
-function clickHandler() {
+
+const clickHandler = () => {
     let txtinput = txtInput.value;
     fetch(getTranslationURL(txtinput)).then(res => res.json()).then(json => {
         console.log(json.contents.translated);
         console.log(json.contents.text);
         outputDiv.innerText = "translated -" + json.contents.translated;
     }).catch(errorhandler)
-};
+}
+
 modeSelect.addEventListener("change", modeSelectHandler);
 btnTranslate.addEventListener("click", clickHandler);
